@@ -144,3 +144,39 @@ btn8.addEventListener('click', e => {
     }
 
 });
+
+
+
+
+// Zadanie 9
+let form9 = document.getElementById('form9');
+let imie9 = document.getElementById("imie9");
+let nazwisko9 = document.getElementById("nazwisko9");
+let wiek9 = document.getElementById("wiek9");
+let ilosc9 = document.getElementById("ilosc9");
+let btn9u = document.getElementById("btn9u");
+let btn9w = document.getElementById("btn9w");
+
+var as = 0;
+btn9w.addEventListener('click', e => {
+    e.preventDefault();
+    ++as;
+
+    let imie9CLN = imie9.cloneNode(true);
+    imie9CLN.setAttribute("id", imie9.getAttribute('id') + as);
+    form9.appendChild(imie9CLN);
+
+    let nazwisko9CLN = nazwisko9.cloneNode(true);
+    nazwisko9CLN.setAttribute("id", nazwisko9.getAttribute('id') + as);
+    form9.appendChild(nazwisko9CLN);
+
+    let wiek9CLN = wiek9.cloneNode(true);
+    wiek9CLN.setAttribute("id", wiek9.getAttribute('id') + as);
+    form9.appendChild(wiek9CLN);
+
+    let ilosc9CLN = ilosc9.cloneNode(true);
+    ilosc9CLN.setAttribute("id", ilosc9.getAttribute('id') + as);
+    form9.appendChild(ilosc9CLN);
+
+
+});
