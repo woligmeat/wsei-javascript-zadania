@@ -118,3 +118,29 @@ root.appendChild(addBtn2zad7).innerHTML = "Zmien";
 addBtn2zad7.addEventListener('click', event => {
     //addBtn.parentNode.removeChild(addBtn);
 });
+
+// Zadanie 8
+let form8 = document.getElementById('form8');
+let element8 = document.getElementById("element8");
+let text8 = document.getElementById("text8");
+let color8 = document.getElementById("color8");
+let quantity8 = document.getElementById("quantity8");
+let btn8 = document.getElementById("btn8");
+
+btn8.addEventListener('click', e => {
+
+    e.preventDefault();
+    // formul8.parentNode.removeChild(formul8);
+    element8V = element8.value;
+    text8V = text8.value;
+    color8V = color8.value;
+    quantity8V = quantity8.value;
+
+    for (let a = 0; a < quantity8V; a++) {
+        let listLi8 = document.createElement(element8V);
+        listLi8.style.color = color8V;
+        form8.appendChild(listLi8);
+        listLi8.innerHTML = text8V;
+    }
+
+});
